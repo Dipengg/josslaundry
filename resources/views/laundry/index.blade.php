@@ -19,7 +19,7 @@
                 <th>Nama Pelanggan</th>
                 <th>Jasa</th>
                 <th>Pembayaran</th>
-                <th>Berat</th>
+                <th>Berat/kg</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>

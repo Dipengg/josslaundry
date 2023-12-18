@@ -9,17 +9,17 @@
     <title>List Pembayaran</title>
 </head>
 
-<body class="container mt-5">
+<body class="container mt-4">
     <h3>List Pembayaran Orderan Joss Laundry</h3>
     <a href="/pembayaran/create" class="btn btn-primary mb-3">Tambah Pembayaran</a>
 
     <table class="table table-bordered">
-        <thead>
+        <thead class="thead-dark">
             <tr>
                 <th>ID Laundry</th>
                 <th>Nominal</th>
                 <th>Dibuat Tanggal</th>
-                <th>Action</th>
+                <th colspan="3">Action</th>
             </tr>
         </thead>
         <tbody>
@@ -29,10 +29,9 @@
                         <td>{{ $b->id_laundry }}</td>
                         <td>{{ $b->nominal }}</td>
                         <td>{{ $b->created_at }}</td>
-                        <td>
-                            <a href="/pembayaran/{{ $b->id_pembayaran }}" class="btn btn-info btn-sm">DETAIL</a>
-                            <a href="/pembayaran/edit/{{ $b->id_pembayaran }}" class="btn btn-warning btn-sm">EDIT</a>
-                            <a href="/pembayaran/delete/{{ $b->id_pembayaran }}" class="btn btn-danger btn-sm">DELETE</a>
+                            <td><a href="/pembayaran/{{ $b->id_pembayaran }}" class="btn btn-info">DETAIL</a></td>
+                            <td><a href="/pembayaran/edit/{{ $b->id_pembayaran }}" class="btn btn-warning">EDIT</a></td>
+                            <td><a href="/pembayaran/delete/{{ $b->id_pembayaran }}" class="btn btn-danger">DELETE</a></td>
                         </td>
                     </tr>
                 @endforeach

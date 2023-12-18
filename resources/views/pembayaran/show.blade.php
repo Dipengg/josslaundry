@@ -13,10 +13,6 @@
             padding: 20px;
         }
 
-        h3 {
-            color: #007bff;
-        }
-
         p {
             margin-bottom: 10px;
         }
@@ -24,7 +20,7 @@
 </head>
 
 <body class="container">
-    <h3 class="mt-4 mb-4">Detail Pembayaran Joss Laundry</h3>
+    <h3>Detail Pembayaran Joss Laundry</h3>
     
     <div class="card">
         <div class="card-body">
