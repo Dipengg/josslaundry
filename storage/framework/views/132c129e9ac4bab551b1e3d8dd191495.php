@@ -5,36 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <title>Form Pembayaran</title>
 </head>
 
-<body>
-    <h3>Form Order Joss Laundry</h3><br>
+<body class="container mt-5">
+    <h3 class="mb-4">Form Order Joss Laundry</h3>
+
     <form method="POST" action="/pembayaran/store">
         <?php echo csrf_field(); ?>
-<table>
-    <tr>
-        <td>Nama Pemesan</td>
-        <td>:</td>
-        <td><select name="id_laundry" id="id_laundry">
-            <?php if(count($laundry) == 0): ?>
-                <option value="" disabled selected>DATA TIDAK ADA</option>
-            <?php else: ?>
-                <?php $__currentLoopData = $laundry; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $l): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <option value="<?php echo e($l->id_laundry); ?>"><?php echo e($l->nama_pelanggan); ?></option>
-                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            <?php endif; ?>
-        </select>
-    </td>
-    </tr>
-    <tr>
-        <td>Nominal</td>
-        <td>:</td>
-        <td><input type="text" name="nominal" placeholder="Masukkan Nominal"></td>
-    </tr>
-</table>
-    <input type="submit" value="Tambah">
+
+        <div class="form-group">
+            <label for="id_laundry">Nama Pemesan</label>
+            <select class="form-control" id="id_laundry" name="id_laundry">
+                <?php if(count($laundry) == 0): ?>
+                    <option value="" disabled selected>DATA TIDAK ADA</option>
+                <?php else: ?>
+                    <?php $__currentLoopData = $laundry; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $l): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <option value="<?php echo e($l->id_laundry); ?>"><?php echo e($l->nama_pelanggan); ?></option>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                <?php endif; ?>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="nominal">Nominal</label>
+            <input type="text" class="form-control" id="nominal" name="nominal" placeholder="Masukkan Nominal">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Tambah</button>
     </form>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
-</html><?php /**PATH C:\laravel-projects\tubesweb\resources\views/pembayaran/create.blade.php ENDPATH**/ ?>
+
+</html>
+<?php /**PATH C:\laravel-projects\tubesweb\resources\views/pembayaran/create.blade.php ENDPATH**/ ?>
