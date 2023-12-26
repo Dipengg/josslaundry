@@ -13,8 +13,8 @@
                     <div class="card-header">{{ __('Profile') }}</div>
 
                     <div class="card-body">
-                        <p>Welcome, {{ $user->name }}!</p>
-                        <p>Email: {{ $user->email }}</p>
+                        <p>Welcome, {{ $users->name }}!</p>
+                        <p>Email: {{ $users->email }}</p>
 
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
