@@ -28,8 +28,6 @@
     <!-- List CRUD -->
     <div class="text-center mt-4">
         <h3>List Table CRUD Joss Laundry</h3>
-        <img src="https://fleibisnis.com/storage/logo/EUnHLV183z3UYPndiXbbYm4oAdW7njhdGfPFEGtY.png" width="250px" height="250px"> 
-
         <div class="row mt-4">
             <div class="col-md-4">
                 <div class="card">
